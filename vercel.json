@@ -1,13 +1,15 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://stepup-backend-hg5k.onrender.com/api/:path*" },
-    { "source": "/admin/:path*", "destination": "https://stepup-backend-hg5k.onrender.com/admin/:path*" },
-    { "source": "/static/:path*", "destination": "https://stepup-backend-hg5k.onrender.com/static/:path*" },
-    { "source": "/tiles/:path*", "destination": "https://stepup-backend-hg5k.onrender.com/tiles/:path*" },
+    { "source": "/api/:path*", "destination": "https://ecommercestepup-backend.onrender.com/api/:path*" },
+    { "source": "/admin/:path*", "destination": "https://ecommercestepup-backend.onrender.com/admin/:path*" },
+    { "source": "/static/:path*", "destination": "https://ecommercestepup-backend.onrender.com/static/:path*" },
+    { "source": "/tiles/:path*", "destination": "https://ecommercestepup-backend.onrender.com/tiles/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
-    { "source": "/(.*)", "headers": [{ "key": "Cross-Origin-Opener-Policy", "value": "same-origin-allow-popups" }, { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }] },
+    { "source": "/(.*)", "headers": [
+      { "key": "Cross-Origin-Opener-Policy", "value": "same-origin-allow-popups" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" } ] },
     { "source": "/api/:path*", "headers": [{ "key": "x-vercel-enable-rewrite-caching", "value": "0" }] },
     { "source": "/admin/:path*", "headers": [{ "key": "x-vercel-enable-rewrite-caching", "value": "0" }] }
   ]
